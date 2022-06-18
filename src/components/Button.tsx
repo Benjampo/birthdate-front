@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Button extends Component {
-    render() {
-        return (
-            <div>
-
-            </div>
-        );
-    }
+function Button() {
+    return (
+        <button className="bg-main p-2 text-white">
+            Test
+        </button>
+    );
 }
+
+export default Button;
 
