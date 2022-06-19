@@ -5,10 +5,9 @@ export const MainBtn = styled.button`
   color: ${props => props.theme.colors.white};
   border: none;
   display: block;
-  max-width: 100%;
-  min-width: 50%;
+  width: 80%;
   padding: 2vh 3vw;
-  margin: 1em;
+  margin: auto;
   font-size: 20px;
 `;
 

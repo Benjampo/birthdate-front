@@ -8,7 +8,6 @@ export const LabelInput = styled.label`
   display: block;
   width: 100%;
   padding: 2vh 3vw;
-  margin: 1em;
   font-size: 20px; 
 `;
 
@@ -17,7 +16,7 @@ export const TextInput = styled.input`
   color: ${props => props.theme.colors.accentColor};
   border: none;
   display: block;
-  width: 100%;
+  width: 80%;
   padding: 2vh 3vw;
   margin: 1em;
   font-size: 20px;
