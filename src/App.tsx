@@ -1,20 +1,20 @@
 import React from 'react';
-import Button from './components/Button'
+import Button from './components/Button/Button'
+import { ThemeProvider } from 'styled-components'
+import { BirthDateTheme } from "./BirthDateTheme";
+import FormField from "./components/FormField/FormField";
 
 function App() {
+    const theme = { ...BirthDateTheme }
   return (
     <div className="App">
-      <header className="App-header">
-        <Button />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <ThemeProvider theme={theme}>
+            <header className="App-header">
+                <FormField title="Email" type="email" placeholder="example@gmail.com" />
+                <FormField title="password" type="password" placeholder="" />
+                <Button />
+            </header>
+        </ThemeProvider>
     </div>
   );
 }
