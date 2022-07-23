@@ -3,6 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from "react-router-dom";
+
+import Home from "./pages/Home";
+import Calendar from "./pages/Calendar";
+import Messages from "./pages/Messages";
+import Settings from "./pages/Settings";
 
 
 const root = ReactDOM.createRoot(
@@ -10,9 +20,16 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-
-        <App />
-
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<App />}>
+                  <Route index element={<Home />} />
+                  <Route path="calendar" element={<Calendar />} />
+                  <Route path="messages" element={<Messages />} />
+                  <Route path="settings" element={<Settings />} />
+              </Route>
+          </Routes>
+      </BrowserRouter>
   </React.StrictMode>
 );
 
