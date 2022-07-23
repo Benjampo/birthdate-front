@@ -17,6 +17,7 @@ function App() {
         getApi()
     }, []);
   return (
+
     <div className="App">
         <ThemeProvider theme={theme}>
             <header className="App-header">
@@ -28,6 +29,7 @@ function App() {
                     <li>{item.name}</li>
                     )};
                 </ul>
+
             </header>
         </ThemeProvider>
     </div>
