@@ -5,7 +5,7 @@ function Home() {
     const [data, setData] = useState([])
     useEffect(() => {
         const getApi = async () => {
-            const tempData =  await axios.get('http://127.0.0.1:8001/api/birthdays')
+            const tempData =  await axios.get('http://127.0.0.1:8000/api/birthdays')
             setData(tempData.data.birthdays)
             console.log(tempData.data.birthdays);
         };
