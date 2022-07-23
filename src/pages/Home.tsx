@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
+import Card from "../components/Card/Card";
 
 function Home() {
     const [data, setData] = useState([])
@@ -16,7 +17,7 @@ function Home() {
             <h1>Home</h1>
             <ul>
                 {data.map((item:any) =>
-                    <li>{item.name}</li>
+                    <Card key={item.id} data={item} />
                 )};
             </ul>
         </div>
