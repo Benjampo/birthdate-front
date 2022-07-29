@@ -51,9 +51,8 @@ function Card(props:any) {
             </ItemDate>
             <ItemName>
                 <ItemNameTitle>{props.data.name}</ItemNameTitle>
-                <ItemNameAge>{nextBirthdayAge(props.data.birth_date)}</ItemNameAge>
+                <ItemNameAge>{nextBirthdayAge(props.data.birth_date)}{' '}years old</ItemNameAge>
             </ItemName>
-            <div></div>
         </CardItem>
     );
 }
