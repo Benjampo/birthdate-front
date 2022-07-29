@@ -1,5 +1,14 @@
 import React from 'react';
-import {CardItem} from "./styles";
+import {
+    CardItem,
+    ItemDate,
+    ItemDateDay,
+    ItemDateMonth,
+    ItemName,
+    ItemNameAge,
+    ItemNameTitle
+} from "./styles";
+import {BirthDateTheme} from "../../styles/BirthDateTheme";
 
 function Card(props:any) {
 
@@ -25,18 +34,25 @@ function Card(props:any) {
         })
     }
 
+    const nextBirthdayAge = (date:any) => {
+        const today =  new Date()
+        const birth = new Date(date)
+
+        return Math.abs(birth.getUTCFullYear() - today.getUTCFullYear()) + 1;
+    }
+
 
 
     return (
         <CardItem>
-            <div>
-                <span>{getDay(props.data.birth_date)}</span>
-                <span>{getMonth(props.data.birth_date)}</span>
-            </div>
-            <div>
-                <h2>{props.data.name}</h2>
-                <span>{}</span>
-            </div>
+            <ItemDate>
+                <ItemDateDay>{getDay(props.data.birth_date)}</ItemDateDay>
+                <ItemDateMonth>{getMonth(props.data.birth_date)}</ItemDateMonth>
+            </ItemDate>
+            <ItemName>
+                <ItemNameTitle>{props.data.name}</ItemNameTitle>
+                <ItemNameAge>{nextBirthdayAge(props.data.birth_date)}</ItemNameAge>
+            </ItemName>
             <div></div>
         </CardItem>
     );

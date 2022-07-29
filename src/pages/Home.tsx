@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import Card from "../components/Card/Card";
+import NextBirth from "../components/NextBirth/NextBirth";
 
 function Home() {
     const [data, setData] = useState([])
@@ -14,7 +15,7 @@ function Home() {
     }, []);
     return (
         <div>
-            <h1>Home</h1>
+            <NextBirth />
             <ul>
                 {data.map((item:any) =>
                     <Card key={item.id} data={item} />
